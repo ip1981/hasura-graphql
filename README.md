@@ -1,13 +1,5 @@
 # Hasura GraphQL Engine
 
-[![Docs](https://img.shields.io/badge/docs-v1.0-brightgreen.svg?style=flat)](https://docs.hasura.io)
-[![CircleCI](https://circleci.com/gh/hasura/graphql-engine.svg?style=shield)](https://circleci.com/gh/hasura/graphql-engine)
-
-
-<a href="https://discord.gg/vBPpJkS"><img src="https://img.shields.io/badge/chat-discord-brightgreen.svg?logo=discord&style=flat"></a>
-<a href="https://twitter.com/intent/follow?screen_name=HasuraHQ"><img src="https://img.shields.io/badge/Follow-HasuraHQ-blue.svg?style=flat&logo=twitter"></a>
-<a href="https://eepurl.com/dBUfJ5"><img src="https://img.shields.io/badge/newsletter-subscribe-yellow.svg?style=flat"></a>
-
 Hasura GraphQL Engine is a blazing-fast GraphQL server that gives you **instant, realtime GraphQL APIs over Postgres**, with [**webhook triggers**](event-triggers.md) on database events, and [**remote schemas**](remote-schemas.md) for business logic.
 
 Hasura helps you build GraphQL apps backed by Postgres or incrementally move to GraphQL for existing applications using Postgres.
@@ -38,61 +30,6 @@ Read more at [hasura.io](https://hasura.io) and the [docs](https://docs.hasura.i
 
 Read more at [hasura.io](https://hasura.io) and the [docs](https://docs.hasura.io).
 
-## Table of contents
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-**Table of Contents**
-
-- [Quickstart:](#quickstart)
-    - [One-click deployment on Heroku](#one-click-deployment-on-heroku)
-    - [Other deployment methods](#other-deployment-methods)
-- [Architecture](#architecture)
-- [Client-side tooling](#client-side-tooling)
-- [Add business logic](#add-business-logic)
-    - [Remote schemas](#remote-schemas)
-    - [Trigger webhooks on database events](#trigger-webhooks-on-database-events)
-- [Demos](#demos)
-    - [Realtime applications](#realtime-applications)
-    - [Videos](#videos)
-- [Support & Troubleshooting](#support--troubleshooting)
-- [Contributing](#contributing)
-- [Brand assets](#brand-assets)
-- [License](#license)
-- [Translations](#translations)
-
-<!-- markdown-toc end -->
-
-## Quickstart:
-
-### One-click deployment on Heroku
-
-The fastest way to try Hasura out is via Heroku.
-
-1. Click on the following button to deploy GraphQL Engine on Heroku with the free Postgres add-on:
-
-    [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/hasura/graphql-engine-heroku)
-
-2. Open the Hasura console
-
-   Visit `https://<app-name>.herokuapp.com` (*replace \<app-name\> with your app name*) to open the admin console.
-
-3. Make your first GraphQL query
-
-   Create a table and instantly run your first query. Follow this [simple guide](https://docs.hasura.io/1.0/graphql/manual/getting-started/first-graphql-query.html).
-
-### Other one-click deployment options
-
-Check out the instructions for the following one-click deployment options:
-
-| **Infra provider** | **One-click link** | **Additional information** |
-|:------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------:|
-| DigitalOcean | [![Deploy to DigitalOcean](https://graphql-engine-cdn.hasura.io/img/create_hasura_droplet_200px.png)](https://marketplace.digitalocean.com/apps/hasura?action=deploy&refcode=c4d9092d2c48&utm_source=hasura&utm_campaign=readme) | [docs](https://docs.hasura.io/1.0/graphql/manual/guides/deployment/digital-ocean-one-click.html#hasura-graphql-engine-digitalocean-one-click-app) |
-| Azure | [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fhasura%2fgraphql-engine%2fmaster%2finstall-manifests%2fazure-container-with-pg%2fazuredeploy.json) | [docs](https://docs.hasura.io/1.0/graphql/manual/guides/deployment/azure-container-instances-postgres.html) |
-
-### Other deployment methods
-
-For Docker-based deployment and advanced configuration options, see [deployment
-guides](https://docs.hasura.io/1.0/graphql/manual/getting-started/index.html) or
-[install manifests](install-manifests).
 
 ## Architecture
 
@@ -124,54 +61,6 @@ processing - [read more](event-triggers.md).
 
 Transform data in Postgres or run business logic on it to derive another dataset that can be queried using GraphQL Engine - [read more](https://docs.hasura.io/1.0/graphql/manual/queries/derived-data.html).
 
-## Demos
-
-Check out all the example applications in the
-[community/examples](community/examples) directory.
-
-### Realtime applications
-
-- Group Chat application built with React, includes a typing indicator, online users & new
-  message notifications.
-  - [Try it out](https://realtime-chat.demo.hasura.app/)
-  - [Tutorial](community/examples/realtime-chat)
-  - [Browse APIs](https://realtime-chat.demo.hasura.app/console)
-
-- Live location tracking app that shows a running vehicle changing current GPS
-  coordinates moving on a map.
-  - [Try it out](https://realtime-location-tracking.demo.hasura.app/)
-  - [Tutorial](community/examples/realtime-location-tracking)
-  - [Browse APIs](https://realtime-location-tracking.demo.hasura.app/console)
-
-- A realtime dashboard for data aggregations on continuously changing data.
-  - [Try it out](https://realtime-poll.demo.hasura.app/)
-  - [Tutorial](community/examples/realtime-poll)
-  - [Browse APIs](https://realtime-poll.demo.hasura.app/console)
-
-### Videos
-
-* [Add GraphQL to a self-hosted GitLab instance](https://www.youtube.com/watch?v=a2AhxKqd82Q) (*3:44 mins*)
-* [Todo app with Auth0 and GraphQL backend](https://www.youtube.com/watch?v=15ITBYnccgc) (*4:00 mins*)
-* [GraphQL on GitLab integrated with GitLab auth](https://www.youtube.com/watch?v=m1ChRhRLq7o) (*4:05 mins*)
-* [Dashboard for 10million rides with geo-location (PostGIS, Timescale)](https://www.youtube.com/watch?v=tsY573yyGWA) (*3:06 mins*)
-
-
-## Support & Troubleshooting
-
-The documentation and community will help you troubleshoot most issues. If you have encountered a bug or need to get in touch with us, you can contact us using one of the following channels:
-
-* Support & feedback: [Discord](https://discord.gg/vBPpJkS)
-* Issue & bug tracking: [GitHub issues](https://github.com/hasura/graphql-engine/issues)
-* Follow product updates: [@HasuraHQ](https://twitter.com/hasurahq)
-* Talk to us on our [website chat](https://hasura.io)
-
-We are committed to fostering an open and welcoming environment in the community. Please see the [Code of Conduct](code-of-conduct.md).
-
-If you want to report a security issue, please [read this](SECURITY.md).
-
-## Contributing
-
-Check out our [contributing guide](CONTRIBUTING.md) for more details.
 
 ## Brand assets
 
@@ -206,11 +95,3 @@ All **other contents** (except those in [`server`](server), [`cli`](cli) and
 This includes everything in the [`docs`](docs) and [`community`](community)
 directories.
 
-## Translations
-
-This readme is available in the following translations:
-
-- [Japanese :jp:](translations/README.japanese.md) (:pray: [@moksahero](https://github.com/moksahero))
-- [French :fr:](translations/README.french.md) (:pray: [@l0ck3](https://github.com/l0ck3))
-
-Translations for other files can be found [here](translations).

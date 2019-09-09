@@ -1,1 +1,0 @@
-../../docs/graphql/manual/guides/deployment/google-kubernetes-engine-cloud-sql.rst
