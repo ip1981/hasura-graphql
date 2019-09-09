@@ -1,0 +1,30 @@
+cabal-version: 1.12
+name: ci-info
+version: 0.1.0.0
+license: MIT
+license-file: LICENSE
+copyright: 2019 Hasura Inc.
+maintainer: build@hasura.io
+author: Ajeet D'Souza
+build-type: Simple
+extra-source-files:
+    README.md
+
+library
+    exposed-modules:
+        CI
+    hs-source-dirs: src
+    other-modules:
+        CI.TH
+        CI.Types
+        Paths_ci_info
+    default-language: Haskell2010
+    build-depends:
+        aeson -any,
+        aeson-casing -any,
+        base >=4.7 && <5,
+        hashable -any,
+        template-haskell -any,
+        text -any,
+        th-lift-instances -any,
+        unordered-containers -any
