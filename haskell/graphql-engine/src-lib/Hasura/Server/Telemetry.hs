@@ -90,9 +90,8 @@ telemetryUrl = "https://telemetry.hasura.io/v1/http"
 mkPayload :: Text -> InstanceId -> Text -> Metrics -> IO TelemetryPayload
 mkPayload dbId instanceId version metrics = do
   ci <- CI.getCI
-  return $ TelemetryPayload topic $
+  return $ TelemetryPayload "server-xxxx" $
     HasuraTelemetry dbId instanceId version ci metrics
-  where topic = bool "server" "server_test" isDevVersion
 
 runTelemetry
   :: Logger

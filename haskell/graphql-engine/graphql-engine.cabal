@@ -23,6 +23,7 @@ flag profile
 
 library
     exposed-modules:
+        Paths_graphql_engine
         Hasura.Prelude
         Hasura.Logging
         Hasura.EncJSON
@@ -220,7 +221,6 @@ library
         wreq -any,
         http-client -any,
         insert-ordered-containers -any,
-        semver -any,
         mustache -any,
         ginger -any,
         file-embed -any,
