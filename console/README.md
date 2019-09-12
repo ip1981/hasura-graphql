@@ -132,18 +132,11 @@ Visit [http://localhost:3000](http://localhost:3000) to confirm the setup.
 Make changes to the code and the console will reload automatically to reflect the new changes. Keep iterating.
 When adding a new feature, it is recommended to add corresponding tests too.
 
-Tests are written using [Cypress](https://www.cypress.io/).
-
 You can use the [Redux DevTools Extension](http://extension.remotedev.io/) to inspect and debug the Redux store.
 It should automatically connect to the Redux store when started in development mode.
 
 By default [redux-logger](https://www.npmjs.com/package/redux-logger) is enabled to assist in development.
 You can disable it if you wish by commenting out the `createLogger` line in `src/client.js`
-
-### Run Tests
-
-- Run tests: `npm run cypress`
-- Write your tests in the `cypress` directory, integration.
 
 ### Submitting a pull request
 
