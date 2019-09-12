@@ -22,19 +22,8 @@
     "start-dev": "better-npm-run start-dev",
     "watch-client": "better-npm-run watch-client",
     "dev": "concurrently --kill-others \"npm run watch-client\" \"npm run start-dev\" ",
-    "precommit": "lint-staged",
     "cypress": "cypress open",
     "test": "cypress run --spec 'cypress/integration/**/**/test.js' --key $CYPRESS_KEY --parallel --record"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.{js,json,css,md}": [
-      "prettier --single-quote --trailing-comma es5 --write",
-      "git add"
-    ]
   },
   "betterScripts": {
     "start-prod": {
@@ -155,12 +144,10 @@
     "file-loader": "^1.1.11",
     "font-awesome": "^4.7.0",
     "font-awesome-webpack": "0.0.4",
-    "husky": "^0.14.3",
     "ignore-loader": "^0.1.2",
     "jquery": "^3.4.1",
     "json-loader": "^0.5.4",
     "less-loader": "^4.1.0",
-    "lint-staged": "^6.1.1",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.12.0",
     "nyc": "^13.3.0",
